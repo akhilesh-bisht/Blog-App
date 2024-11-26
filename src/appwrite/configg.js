@@ -32,10 +32,7 @@ export class Service {
       console.log("eror cratepost ::", error);
     }
   }
-  async updatePost(
-    slug,
-    { title, slug, content, featuredImage, status, userId }
-  ) {
+  async updatePost(slug, { title, content, featuredImage, status, userId }) {
     try {
       return await this.databases.updateDocument(
         Conf.appwriteDatabaseID,
