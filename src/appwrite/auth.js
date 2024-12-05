@@ -22,12 +22,14 @@ export class AuthService {
       );
       if (userAccount) {
         // call another method
+        console.log("user created");
+
         return this.login({ email, password });
       } else {
         return userAccount;
       }
     } catch (error) {
-      throw new error();
+      throw error;
     }
   }
 
